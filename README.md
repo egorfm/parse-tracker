@@ -1,29 +1,75 @@
-Parse Source Tracker
+<h1 align="center">📊 parse-tracker</h1>
 
-A tiny local tool for keeping track of the sources you scrape: which ones are done, which are in progress, which failed, and when each run is planned to start and finish.
+<p align="center">
+  Автономный локальный веб-интерфейс для отслеживания источников парсинга, статусов задач и дедлайнов
+</p>
 
-No installation, no dependencies, no server. It is a single HTML file.
+<p align="center">
+  <img src="https://img.shields.io/badge/HTML5-Single--File-E34F26?logo=html5&logoColor=white" alt="HTML5">
+  <img src="https://img.shields.io/badge/JavaScript-Vanilla-F7DF1E?logo=javascript&logoColor=black" alt="JavaScript">
+  <img src="https://img.shields.io/badge/Dependencies-Zero-brightgreen" alt="Dependencies">
+  <img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License">
+</p>
 
-Features
+---
 
-- Add sources (URL or name) with a planned start and end time
-- Four statuses: not parsed, in progress, parsed, error
-- Overdue highlight when the planned end time has passed and the source is not parsed
-- Filter by status and see summary counters
-- Export to JSON (backup) and CSV (spreadsheets), import from JSON
-- Light and dark theme follow the system setting
+## ✨ Возможности
 
-Usage
+- 📋 **Учет источников**: добавление сайтов и ссылок с указанием планируемого начала и окончания сбора.
+- 🚦 **4 понятных статуса**: `Не начат`, `В процессе`, `Готово`, `Ошибка`.
+- ⏰ **Контроль дедлайнов**: автоматическая подсветка просроченных задач, если запланированное время прошло.
+- 🔍 **Фильтрация и аналитика**: мгновенный фильтр по статусам и счетчики задач в реальном времени.
+- 💾 **Экспорт и импорт**: выгрузка в CSV (для Excel/Google Таблиц) и JSON (для резервных копий и переноса).
+- 🌓 **Адаптивная тема**: автоматическая поддержка светлой и темной темы оформления.
+- ⚡ **Zero-Setup**: работает без сервера, сборки и внешних библиотек прямо в браузере.
 
-1. Clone the repository or download `index.html`.
-2. Open `index.html` in any modern browser.
+---
+
+## 🛠 Стек технологий
+
+- **HTML5 / CSS3** (CSS Variables, Flexbox, Grid)
+- **Vanilla JavaScript** (ES6+)
+- **LocalStorage API** — сохранение данных на вашем устройстве
+
+---
+
+## 🚀 Быстрый старт
+
+Установка не требуется. Достаточно открыть файл `index.html` в любом браузере:
 
 ```bash
-git clone https://github.com/egorfm/parse-source-tracker.git
-cd parse-source-tracker
+# 1. Клонирование репозитория
+git clone https://github.com/egorfm/parse-tracker.git
+cd parse-tracker
+
+# 2. Открытие в браузере (macOS)
 open index.html
+
+# Для Linux: xdg-open index.html
+# Для Windows: start index.html
 ```
 
-Data storage
+---
 
-Data lives in the browser's `localStorage`, so it stays on your machine and is tied to the browser you use. Clearing site data removes it. Use **Export JSON** regularly to keep a backup.
+## 💻 Хранение данных
+
+Все данные сохраняются локально в `localStorage` вашего браузера:
+- Данные не отправляются во внешнюю сеть и остаются строго конфиденциальными.
+- Для резервного копирования или переноса на другое устройство используйте кнопку **«Экспорт JSON»**.
+
+---
+
+## 📁 Структура проекта
+
+```
+parse-tracker/
+├── index.html     # Полный интерфейс (разметка, стили и логика)
+├── LICENSE        # Лицензия MIT
+└── README.md      # Документация проекта
+```
+
+---
+
+## 📄 Лицензия
+
+Проект распространяется под лицензией [MIT](LICENSE).
